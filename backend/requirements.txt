@@ -1,0 +1,11 @@
+﻿fastapi
+uvicorn[standard]
+scrapling[fetchers]
+pydantic-settings
+pytest
+httpx
+
+# Database
+sqlalchemy>=2.0
+psycopg[binary]>=3.2
+alembic>=1.14
