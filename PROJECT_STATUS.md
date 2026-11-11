@@ -8,7 +8,7 @@
 - Pause date: 2026-11-11
 - Current development checkpoint: Phase 1 / D7-6 completed
 - Deployment status: Not deployed
-- Git status at pause preparation: Initial commit not yet created
+- Git checkpoint: committed and pushed to GitHub main on 2026-11-11
 
 This project aims to build an adaptive web crawling platform with configurable sources, tasks, extraction rules, execution history, and results.
 
@@ -303,30 +303,31 @@ Additional cascade and transaction tests were also deferred.
 
 The local .env.example must contain placeholders only.
 
-## 10. Security Follow-up Before GitHub Push
+## 10. Security Follow-up (Completed)
 
-Database connection credentials were inadvertently displayed during the pause preparation conversation.
+During pause preparation, Neon development database credentials were inadvertently displayed in the conversation. The development database password was rotated on 2026-11-11.
 
-Before pushing the project:
+Completed:
+1. Rotated the Neon development database password.
+2. Updated local .env with the new credentials.
+3. Verified Pooled Connection using SELECT 1: success.
+4. Verified Direct Connection using SELECT 1: success.
+5. Confirmed .env remains ignored by Git.
+6. Confirmed Alembic current revision: 1413cf9fcd0a (head).
 
-1. Rotate the Neon development database password.
-2. Update the local .env file.
-3. Verify that the development database connection still works.
-4. Confirm that .env remains ignored by Git.
-5. Never place real credentials in .env.example or PROJECT_STATUS.md.
-
-Neon production must remain untouched.
+Neon production was not modified. No credentials are stored in this file or .env.example.
 
 ## 11. Git Checkpoint
 
-- Branch: main
-- Initial commit: pending
-- GitHub push: pending
-- Deployment: not requested and not performed
-
-Record the initial code snapshot commit hash here after the first successful commit:
-
-Initial code snapshot commit: pending
+- Current branch: main
+- Initial code snapshot commit: 7a83d1df89b380ec5d6bf3f15504998395163b57
+- Commit message: chore: save project pause checkpoint after D7-6
+- GitHub remote: origin
+- GitHub branch: origin/main
+- GitHub push: completed successfully on 2026-11-11
+- Working tree: clean immediately after initial push
+- Deployment: not performed; deployment was not requested
+- Neon production: untouched
 
 ## 12. How to Resume Development
 
